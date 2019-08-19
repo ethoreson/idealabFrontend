@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import QueueContainer from './components/Queue/QueueContainer';
+import UploadContainer from './components/Upload/UploadContainer';
+import LoginManager from './components/Login/LoginManager';
+import SidebarNavigation from './SidebarNavigation';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
+  const activeUser = 'admin';
+  const sidebar = activeUser? <SidebarNavigation /> : null;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HashRouter>
+        {sidebar}
+      <Switch>
+        <Route exact path="/queue" component={QueueContainer} />
+        <Route exact path="/upload" component={UploadContainer} />
+        <Route path="/login" component={LoginManager} />
+      </Switch>
+      </HashRouter>
     </div>
   );
 }
