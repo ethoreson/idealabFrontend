@@ -1,5 +1,5 @@
-export default {
- data: [
+export default
+[
      {
          id: 'abc123',
          name: 'Alfie A',
@@ -55,5 +55,4 @@ export default {
         position: 500,
         comments: '',
     },
- ]   
-}
+ ];
