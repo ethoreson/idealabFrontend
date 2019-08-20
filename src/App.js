@@ -10,7 +10,7 @@ function App() {
   const activeUser = 'admin';
   const sidebar = activeUser ? <SidebarNavigation /> : null;
   return (
-    <div className="App">
+    <div className="App grid-container">
       <HashRouter>
         {sidebar}
       <Switch>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class SidebarNavigation extends React.Component {
 
@@ -10,13 +10,15 @@ class SidebarNavigation extends React.Component {
 
     render() {
         return (
-            <div>
-                <ul>
-                    <li><Link to="/queue">Queue</Link></li>
-                    <li><Link to="/upload">Upload</Link></li>
-                    <li onClick={this.props.logout}><Link to="/login">Log Out</Link></li>
+            <nav className={"grid-item-nav"}>
+                <ul className={"navList"}>
+                    <li><NavLink to="/upload" activeClassName={"selected"}>upload</NavLink></li>
+                    <li><NavLink to="/queue" activeClassName={"selected"}>queue</NavLink></li>
+                    <li><NavLink to="/manageaccounts" activeClassName={"selected"}>manage accounts</NavLink></li>
+                    <li><NavLink to="/analytics" activeClassName={"selected"}>analytics</NavLink></li>
+                    <li onClick={this.props.logout}><NavLink to="/login" activeClassName={"selected"}>log out</NavLink></li>
                 </ul>
-            </div>
+            </nav>
         );
     }
 }
