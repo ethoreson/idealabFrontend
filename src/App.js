@@ -8,7 +8,7 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   const activeUser = 'admin';
-  const sidebar = activeUser? <SidebarNavigation /> : null;
+  const sidebar = activeUser ? <SidebarNavigation /> : null;
   return (
     <div className="App">
       <HashRouter>

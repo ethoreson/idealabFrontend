@@ -3,7 +3,7 @@ import React from 'react';
 function QueueContainer(){
   return (
     <div>
-        <h2>Build Your Queue Here!</h2>
+        <h2>Kyle and Emilie first commit</h2>
     </div>
   );
 }
