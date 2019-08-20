@@ -1,0 +1,79 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+}
+
+input {
+	display: block;
+	height: 3rem;
+	width: 80%;
+	margin: 2rem;
+	background-color: #00aeef;
+	border-color: #00aeef;
+	border-radius: 2px;
+	outline: none;
+	border-style: solid;
+	font-size: 1.5rem;
+	padding: 0.25rem;
+}
+
+button {
+	display: block;
+	height: 3.5rem;
+	width: 83.5%;
+	margin: 2rem;
+	background-color: #00aeef;
+	border-color: #00aeef;
+	border-radius: 2px;
+	font-size: 1.5rem;
+	color: #4b4b4b;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+	text-align: center;
+	font-size: 1.5rem;
+	color: #4b4b4b;
+	vertical-align: middle;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	text-align: center;
+	font-size: 1.5rem;
+	color: #4b4b4b;
+	vertical-align: middle;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	text-align: center;
+	font-size: 1.5rem;
+	color: #4b4b4b;
+	vertical-align: middle;
+}
+
+:-ms-input-placeholder {
+	text-align: center;
+	font-size: 1.5rem;
+	color: #4b4b4b;
+	vertical-align: middle;
+}
