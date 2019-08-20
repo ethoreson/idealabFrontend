@@ -1,17 +1,11 @@
 import React from 'react';
 
-class LoginManager extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return (
-			<div>
-				<p>This WILL be a functional component</p>
-			</div>
-		);
-	}
-}
+const LoginManager = () => {
+	return (
+		<div>
+			<p>This IS a functional stateless component</p>
+		</div>
+	);
+};
 
 export default LoginManager;
