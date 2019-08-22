@@ -1,0 +1,16 @@
+.banner {
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+}
+
+body {
+    margin: 0px 50px;
+}
+
+.col10 {
+    width: 5%;
+}
+.col20 {
+    width:20%;
+}
