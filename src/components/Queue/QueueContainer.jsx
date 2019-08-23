@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import dummyData from '../dummyData';
+import PrintCardContainer from './components/PrintCardContainer';
 
-function QueueContainer(){
+
+
+const QueueContainer = () => {
+  let totalJobsInWaiting;
+  const [data,setData] = useState(dummyData);
+  // console.log(data);
+  totalJobsInWaiting = data.length;
+
+  const renderPrintCards = data.map((el, i) => <PrintCardContainer data={el} key={i} />)
+
+
   return (
     <div>
-        <h2>Build Your Queue Here!</h2>
+        <p>{totalJobsInWaiting} jobs in queue</p>
+        {renderPrintCards}
     </div>
   );
 }
