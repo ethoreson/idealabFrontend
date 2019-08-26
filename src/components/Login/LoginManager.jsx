@@ -17,7 +17,7 @@ const LoginManager = () => {
 				<img src={ideaLABlogo} alt='ideaLABLogo' />
 				<h1>3D Printing and Upload Queue</h1>
 				<h2>Sign In</h2>
-				<form form onSubmit={e => onSubmit(e)}>
+				<form onSubmit={e => onSubmit(e)}>
 					<input
 						name='email'
 						placeholder='email'
