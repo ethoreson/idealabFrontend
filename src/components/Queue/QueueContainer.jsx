@@ -19,14 +19,14 @@ const QueueContainer = () => {
                     valueString = valueString + ' ' + printJob[key];
                 }
             }
-            return printJob[index] = valueString;
+            return printJob[index] = valueString.toLowerCase();
         });
 		setStringedValues(searchValues);
 	}, [data]);
 
 	const filterByTerm = (searchTerm) => {
 		const filteredSearch = data.filter((printJob, i) => {
-			return stringedValues[i].indexOf(searchTerm) !== -1;
+			return stringedValues[i].indexOf(searchTerm.toLowerCase()) !== -1;
 		});
 		setFilteredData(filteredSearch);
 	}
@@ -37,14 +37,16 @@ const QueueContainer = () => {
 
 	return (
 		<div>
-			<SearchBar filterByTerm={filterByTerm} />
+			<div className='queueFilterInfo'>
+				<div>{totalJobsInWaiting} jobs in queue</div>
+				<SearchBar filterByTerm={filterByTerm} />
+			</div>
 			<ul className='banner'>
 				<li className='col10'></li>
 				<li className='col20'>File Name</li>
 				<li className='col20'>Color</li>
 				<li className='col20'>Submitted</li>
 				<li className='col20'>Status</li>
-				<li className='col10'>{totalJobsInWaiting} jobs in queue</li>
 			</ul>
 			{renderPrintCards}
 		</div>

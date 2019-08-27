@@ -15,7 +15,7 @@ const SearchBar = ({ filterByTerm }) => {
             value={search}
             onChange={searchQuery}
             type='text'
-            placeholder='Search...'
+            placeholder='Search'
         />
         </div>
 	);
