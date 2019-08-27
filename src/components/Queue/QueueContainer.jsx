@@ -38,7 +38,14 @@ const QueueContainer = () => {
 	return (
 		<div>
 			<SearchBar filterByTerm={filterByTerm} />
-			<p>{totalJobsInWaiting} jobs in queue</p>
+			<ul className='banner'>
+				<li className='col10'></li>
+				<li className='col20'>File Name</li>
+				<li className='col20'>Color</li>
+				<li className='col20'>Submitted</li>
+				<li className='col20'>Status</li>
+				<li className='col10'>{totalJobsInWaiting} jobs in queue</li>
+			</ul>
 			{renderPrintCards}
 		</div>
 	);
