@@ -5,28 +5,23 @@
 .container {
 	width: auto;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-}
-
-.card {
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	height: 100%;
 	width: 30%;
 }
 
-h1 {
-	margin-top: 3em;
+h4 {
+	margin-top: 1em;
 }
 
-input {
+.container > input {
 	display: block;
 	height: 2em;
 	width: 15em;
 	margin: 2rem;
+	text-align: center;
 	background-color: #00aeef;
 	border-color: #00aeef;
 	border-radius: 2px;
@@ -36,7 +31,7 @@ input {
 	padding: 0.25rem;
 }
 
-button {
+.container > button {
 	display: block;
 	height: 2.5em;
 	width: 15.5em;
@@ -48,18 +43,18 @@ button {
 	color: #4b4b4b;
 }
 
-button:hover {
+.container > button:hover {
 	cursor: pointer;
 }
 
-::-webkit-input-placeholder {
+.container > ::-webkit-input-placeholder {
 	text-align: center;
 	font-size: 1.5rem;
 	color: #4b4b4b;
 	vertical-align: middle;
 }
 
-:-moz-placeholder {
+.container > :-moz-placeholder {
 	/* Firefox 18- */
 	text-align: center;
 	font-size: 1.5rem;
@@ -67,7 +62,7 @@ button:hover {
 	vertical-align: middle;
 }
 
-::-moz-placeholder {
+.container > ::-moz-placeholder {
 	/* Firefox 19+ */
 	text-align: center;
 	font-size: 1.5rem;
@@ -75,7 +70,7 @@ button:hover {
 	vertical-align: middle;
 }
 
-:-ms-input-placeholder {
+.container > :-ms-input-placeholder {
 	text-align: center;
 	font-size: 1.5rem;
 	color: #4b4b4b;
