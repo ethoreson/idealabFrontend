@@ -9,7 +9,7 @@ const PrintCardContainer = ({ data }) => {
 	return (
 		<div className='printCardContainer'>
 			<p>{data.fileName}</p>
-			<p style={color}>{data.color}</p>
+			<p style={color} className='colorSphere'></p>
 		</div>
 	);
 };
